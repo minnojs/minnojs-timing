@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <title>Timing Test[jsPsych]</title>
+        <meta charset="UTF-8">
+
+        <!-- external libraries -->
+        <script src="https://cdn.jsdelivr.net/gh/jspsych/jsPsych@6.3.1/jspsych.js" integrity="sha256-kOW6+aIXyryqoyWF+4H3T4nnyRkeK3n7Y9rgPo5F2G4=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jspsych/jsPsych@6.3.1/css/jspsych.css" integrity="sha256-PWWZl6Ndhah+PBnhO45uFHM2DSViIsTSfKY3R/T2osQ=" crossorigin="anonymous">
+
+        <script src="https://cdn.jsdelivr.net/gh/jspsych/jsPsych@6.3.1/plugins/jspsych-html-keyboard-response.js" integrity="sha256-tFdl0alsTlmHdlIJGy3uWBAPUfv7hjmRbhvOv5Urj3o=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/jspsych/jsPsych@6.3.1/plugins/jspsych-image-keyboard-response.js" integrity="sha256-EeoxYK8KnejYJ9cE3qoXuNXtCkAJ+bq/9Pr1QfC36lw=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/jspsych/jsPsych@6.3.1/plugins/jspsych-fullscreen.js" integrity="sha256-JRljFHJHdVMygIfnaedjsp1aVOpB4FZ3Hn8GLLNH8vA=" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            /* create timeline */
+            var timeline = [];
+
+            /*Create fullscreen*/
+            timeline.push({
+                type: 'fullscreen',
+                fullscreen_mode: true,
+            });
+
+            /* define welcome message trial */
+            var welcome = {
+                type: "html-keyboard-response",
+                stimulus: "Welcome to the experiment. Press any key to begin."
+            };
+            timeline.push(welcome);
+
+            /* create starter blank screen */
+            var initBlank = {
+                type: "image-keyboard-response",
+                data: {test_part: 'initBlank'},
+                stimulus: jsPsych.timelineVariable('blank'),
+                choices: jsPsych.ALL_KEYS,
+                response_ends_trial: true,
+                stimulus_duration: 300,
+                trial_duration: 1000,
+            };
+
+            /* Vars */
+            var timelineVars = [
+                {
+                    blank: 'img/black.png',
+                    data: {test_part: 'test', correct_response: 'space'}
+                },
+            ];
+
+            /* Trial struct */
+            var test_procedure = {
+                timeline: [initBlank/*, stim*/],
+                timeline_variables: timelineVars,
+                randomize_order: false,
+                repetitions: 1000 // nTrials
+            }
+            timeline.push(test_procedure);
+
+            /* start the experiment */
+            jsPsych.init({
+                timeline: timeline,
+                preload_images: ["img/white.png", "img/black.png"],
+                on_finish: function(data) {
+                    download('jspsych.timing.'+ (new Date()) +'.csv', jsPsych.data.get().csv());
+
+                    function download(filename, data){
+                        var blob = new Blob([data]);
+
+                        if (window.navigator.msSaveOrOpenBlob) window.navigator.msSaveBlob(blob, filename);
+                        else {
+                            var elem = window.document.createElement('a');
+                            elem.href = window.URL.createObjectURL(blob);
+                            elem.download = filename;
+                            document.body.appendChild(elem);
+                            elem.click();
+                            document.body.removeChild(elem);
+                        }
+                    };
+                }
+            });
+
+        </script>
+    </body>
+
+</html>
