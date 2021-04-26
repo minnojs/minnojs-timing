@@ -1,7 +1,7 @@
 define(['timeAPI'], function(APIConstructor) {
 
     var API = new APIConstructor();
-    var REPETITIONS = 1000;
+    var REPETITIONS = 200;
 
 	API.addTrialSets('instructions',{
         input: [ {handle:'end', on: 'space' } ],

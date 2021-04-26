@@ -18,6 +18,7 @@
         <script type="text/javascript">
             /* create timeline */
             var timeline = [];
+            var REPETITIONS = 200;
 
             var welcome = {
                 type: "html-keyboard-response",
@@ -36,7 +37,7 @@
             /* Trial struct */
             var test_procedure = {
                 timeline: [stim],
-                repetitions: 1000 // nTrials
+                repetitions: REPETITIONS // nTrials
             }
             timeline.push(test_procedure);
 
