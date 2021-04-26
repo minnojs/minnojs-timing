@@ -19,53 +19,22 @@
             /* create timeline */
             var timeline = [];
 
-            /*Create fullscreen*/
-            timeline.push({
-                type: 'fullscreen',
-                fullscreen_mode: true,
-            });
-
-            /* define welcome message trial */
             var welcome = {
                 type: "html-keyboard-response",
-                stimulus: "Welcome to the experiment. Press any key to begin."
+                stimulus: "Welcome to the <bold>response timing</bold> experiment. Press any key to begin."
             };
             timeline.push(welcome);
 
-            /* create starter blank screen */
-            var initBlank = {
-                type: "image-keyboard-response",
-                data: {test_part: 'initBlank'},
-                stimulus: jsPsych.timelineVariable('blank'),
-                choices: jsPsych.NO_KEYS,
-                stimulus_duration: 300,
-                trial_duration: 300
-            };
-
-            /* create starter blank screen */
             var stim = {
                 type: "image-keyboard-response",
-                data: {test_part: 'stims'},
-                stimulus: jsPsych.timelineVariable('visStim'),
-                prompt: "<img src='img/white.png' class='imagePosition'</img>",
+                stimulus: 'img/black.png',
                 choices: jsPsych.ALL_KEYS,
-                stimulus_duration: 200,
-                trial_duration: 200
+                stimulus_duration: 200
             };
-
-            /* Vars */
-            var timelineVars = [
-                {blank: 'img/black.png',
-                    visStim: 'img/white.png',
-                    data: {test_part: 'stims', correct_response: '1'}
-                }
-            ];
 
             /* Trial struct */
             var test_procedure = {
-                timeline: [initBlank, stim],
-                timeline_variables: timelineVars,
-                randomize_order: false,
+                timeline: [stim],
                 repetitions: 1000 // nTrials
             }
             timeline.push(test_procedure);
@@ -73,7 +42,7 @@
             /* start the experiment */
             jsPsych.init({
                 timeline: timeline,
-                preload_images: ["img/white.png", "img/black.png"],
+                preload_images: ["img/black.png"],
                 on_finish: function(data) {
                     download('jspsych.timing.'+ (new Date()) +'.csv', jsPsych.data.get().csv());
 
