@@ -21,7 +21,8 @@
 
             var welcome = {
                 type: "html-keyboard-response",
-                stimulus: "Welcome to the <bold>response timing</bold> experiment. Press any key to begin."
+                stimulus: "Welcome to the <bold>response timing</bold> experiment. Press any key to begin.",
+                post_trial_gap: 300
             };
             timeline.push(welcome);
 
@@ -29,7 +30,7 @@
                 type: "image-keyboard-response",
                 stimulus: 'img/black.png',
                 choices: jsPsych.ALL_KEYS,
-                stimulus_duration: 200
+                post_trial_gap: 300
             };
 
             /* Trial struct */
