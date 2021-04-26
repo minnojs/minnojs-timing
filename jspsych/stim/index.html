@@ -19,42 +19,25 @@
             /* create timeline */
             var timeline = [];
 
-            /*Create fullscreen*/
-            timeline.push({
-                type: 'fullscreen',
-                fullscreen_mode: true,
-            });
-
             /* define welcome message trial */
             var welcome = {
                 type: "html-keyboard-response",
-                stimulus: "Welcome to the experiment. Press any key to begin."
+                stimulus: "Welcome to the <strong>stimulus timing</strong> experiment. Press any key to begin."
             };
             timeline.push(welcome);
 
-            /* create starter blank screen */
-            var initBlank = {
+            var stim = {
                 type: "image-keyboard-response",
-                data: {test_part: 'initBlank'},
-                stimulus: jsPsych.timelineVariable('blank'),
+                stimulus: 'img/black.png',
                 choices: jsPsych.ALL_KEYS,
                 response_ends_trial: false,
-                stimulus_duration: 300,
-                trial_duration: 300,
+                stimulus_duration: 200,
+                trial_duration: 500,
             };
-
-            /* Vars */
-            var timelineVars = [
-                {
-                    blank: 'img/black.png',
-                    data: {test_part: 'test', correct_response: 'space'}
-                },
-            ];
 
             /* Trial struct */
             var test_procedure = {
-                timeline: [initBlank/*, stim*/],
-                timeline_variables: timelineVars,
+                timeline: [stim],
                 randomize_order: false,
                 repetitions: 1000 // nTrials
             }
