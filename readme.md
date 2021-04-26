@@ -5,6 +5,7 @@ The tasks we test are based on the tasks used in [Bridges and colleagues 2020](h
 
 Player      | Response                                                              | Stimulus
 ----------  | --------------------------------------------------------------------- | ---------
+minnoJS     | [link](https://minnojs.github.io/minnojs-timing/minnojs/response)     | [link](https://minnojs.github.io/minnojs-timing/minnojs/stim)   
 jsPsych     | [link](https://minnojs.github.io/minnojs-timing/jspsych/response)     | [link](https://minnojs.github.io/minnojs-timing/jspsych/stim)   
 
 
