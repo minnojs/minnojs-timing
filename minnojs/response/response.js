@@ -43,7 +43,7 @@ define(['timeAPI'], function(APIConstructor) {
             }	
 		],
 		stimuli : [	
-			{media:{image:'img/black.png'}}
+			{media:{image:'img/white.png'}}
 		]
 	});
 	
