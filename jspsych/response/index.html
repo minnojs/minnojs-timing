@@ -44,7 +44,7 @@
             /* start the experiment */
             jsPsych.init({
                 timeline: timeline,
-                preload_images: ["img/black.png"],
+                preload_images: ["img/white.png"],
                 on_finish: function(data) {
                     download('jspsych.timing.'+ (new Date()) +'.csv', jsPsych.data.get().csv());
 
