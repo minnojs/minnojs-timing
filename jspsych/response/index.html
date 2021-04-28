@@ -14,7 +14,7 @@
         <script src="https://cdn.jsdelivr.net/gh/jspsych/jsPsych@6.3.1/plugins/jspsych-fullscreen.js" integrity="sha256-JRljFHJHdVMygIfnaedjsp1aVOpB4FZ3Hn8GLLNH8vA=" crossorigin="anonymous"></script>
     </head>
 
-    <body>
+    <body style="background-color:black;">
         <script type="text/javascript">
             /* create timeline */
             var timeline = [];
@@ -29,7 +29,7 @@
 
             var stim = {
                 type: "image-keyboard-response",
-                stimulus: 'img/black.png',
+                stimulus: 'img/white.png',
                 choices: jsPsych.ALL_KEYS,
                 post_trial_gap: 300
             };
