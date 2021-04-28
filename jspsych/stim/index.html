@@ -14,7 +14,7 @@
         <script src="https://cdn.jsdelivr.net/gh/jspsych/jsPsych@6.3.1/plugins/jspsych-fullscreen.js" integrity="sha256-JRljFHJHdVMygIfnaedjsp1aVOpB4FZ3Hn8GLLNH8vA=" crossorigin="anonymous"></script>
     </head>
 
-    <body>
+    <body style="background-color:black;">
         <script type="text/javascript">
             /* create timeline */
             var timeline = [];
@@ -29,7 +29,7 @@
 
             var stim = {
                 type: "image-keyboard-response",
-                stimulus: 'img/black.png',
+                stimulus: 'img/white.png',
                 choices: jsPsych.ALL_KEYS,
                 response_ends_trial: false,
                 stimulus_duration: 200,
@@ -47,7 +47,7 @@
             /* start the experiment */
             jsPsych.init({
                 timeline: timeline,
-                preload_images: ["img/white.png", "img/black.png"],
+                preload_images: ["img/white.png", "img/white.png"],
                 on_finish: function(data) {
                     download('jspsych.timing.'+ (new Date()) +'.csv', jsPsych.data.get().csv());
 
