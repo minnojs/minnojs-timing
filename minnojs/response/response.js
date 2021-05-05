@@ -4,6 +4,7 @@ define(['timeAPI'], function(APIConstructor) {
     var REPETITIONS = 200;
 
     API.addSettings('logger', {type:'csv', singleTask:true, saveLocal:true, fileName:'minnojs.response.csv'});
+    API.addSettings('canvas', {borderColor:'black'});
 
 	API.addTrialSets('instructions',{
         input: [ {handle:'end', on: 'space' } ],

@@ -38,11 +38,9 @@ We set the BBTK to DSC (Digital stimulus capture) mode.
 * player: endTrial (hide stimulus)
 * blackbox: measure offset
 
-This experiment measures capability to disply stimuli for predetermined times.
+This experiment measures capability to display stimuli for predetermined times.
 It is important because we want to know that we can expose participants to specific stimuli (e.g. 200ms image).
 Expected measure latency is 200ms.
 It can be effected by:
 * faulty time (e.g. setTimeout)
 * Noisy onset/offset times of display.
-
-

@@ -3,6 +3,8 @@ define(['timeAPI'], function(APIConstructor) {
     var API = new APIConstructor();
     var REPETITIONS = 200;
 
+    API.addSettings('canvas', {borderColor:'black'});
+
 	API.addTrialSets('instructions',{
         input: [ {handle:'end', on: 'space' } ],
 		interactions: [
@@ -34,7 +36,7 @@ define(['timeAPI'], function(APIConstructor) {
             {
                 conditions:  [{type:'inputEquals',value:'hideStimulus'}],
                 actions: [
-                    { type:'showStim', handle:'blank'},
+                    { type:'hideStim', handle:'All'},
                     {type:'endTrial'} 
                 ]
             },	
