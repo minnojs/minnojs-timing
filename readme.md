@@ -3,10 +3,11 @@
 This repository is dedicated for code for testing the accuracy of web based behavioural experimentation platforms.
 The tasks we test are based on the tasks used in [Bridges and colleagues 2020](https://peerj.com/articles/9414/).
 
-Player      | Response                                                              | Stimulus
-----------  | --------------------------------------------------------------------- | ---------
-minnoJS     | [link](https://minnojs.github.io/minnojs-timing/minnojs/response)     | [link](https://minnojs.github.io/minnojs-timing/minnojs/stim)   
-jsPsych     | [link](https://minnojs.github.io/minnojs-timing/jspsych/response)     | [link](https://minnojs.github.io/minnojs-timing/jspsych/stim)   
+Player      | Response                                                              | Stimulus                                                       | Notes
+----------  | --------------------------------------------------------------------- | ---------                                                      | 
+minnoJS     | [link](https://minnojs.github.io/minnojs-timing/minnojs/response)     | [link](https://minnojs.github.io/minnojs-timing/minnojs/stim)  | 
+jsPsych     | [link](https://minnojs.github.io/minnojs-timing/jspsych/response)     | [link](https://minnojs.github.io/minnojs-timing/jspsych/stim)  | 
+psychoJS    | [link](https://pavlovia.org/eladzlot/psychojs-response-timing)        | [link](https://pavlovia.org/eladzlot/psychojs-response-timing) | PsychoJS is proprietary and does not allow free use, the link is to the files
 
 
 ### Task 1: Response timing
