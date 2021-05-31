@@ -7,7 +7,7 @@ Player      | Response                                                          
 ----------  | --------------------------------------------------------------------- | ---------                                                      | 
 minnoJS     | [link](https://minnojs.github.io/minnojs-timing/minnojs/response)     | [link](https://minnojs.github.io/minnojs-timing/minnojs/stim)  | 
 jsPsych     | [link](https://minnojs.github.io/minnojs-timing/jspsych/response)     | [link](https://minnojs.github.io/minnojs-timing/jspsych/stim)  | 
-psychoJS    | [link](https://pavlovia.org/eladzlot/psychojs-response-timing)        | [link](https://pavlovia.org/eladzlot/psychojs-response-timing) | PsychoJS is proprietary and does not allow free use, the link is to the files
+psychoJS    | [link](https://pavlovia.org/eladzlot/psychojs-response-timing)        | [link](https://pavlovia.org/eladzlot/psychojs-stimulus-timing) | PsychoJS is proprietary and does not allow free use, the link is to the files
 
 
 ### Task 1: Response timing
