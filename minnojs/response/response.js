@@ -1,7 +1,7 @@
 define(['timeAPI'], function(APIConstructor) {
 
     var API = new APIConstructor();
-    var REPETITIONS = 200;
+    var REPETITIONS = 1000;
 
     API.addSettings('logger', {type:'csv', singleTask:true, saveLocal:true, fileName:'minnojs.response.csv'});
     API.addSettings('canvas', {borderColor:'black'});

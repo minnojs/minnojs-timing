@@ -1,7 +1,7 @@
 define(['timeAPI'], function(APIConstructor) {
 
     var API = new APIConstructor();
-    var REPETITIONS = 200;
+    var REPETITIONS = 1000;
 
     API.addSettings('canvas', {borderColor:'black'});
 
