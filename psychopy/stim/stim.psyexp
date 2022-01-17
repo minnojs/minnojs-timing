@@ -15,11 +15,11 @@
     <Param name="JS libs" val="packaged" valType="str" updates="None"/>
     <Param name="Monitor" val="testMonitor" valType="str" updates="None"/>
     <Param name="Resources" val="[]" valType="list" updates="None"/>
-    <Param name="Save csv file" val="False" valType="bool" updates="None"/>
+<!--     <Param name="Save csv file" val="False" valType="bool" updates="None"/>
     <Param name="Save excel file" val="False" valType="bool" updates="None"/>
     <Param name="Save log file" val="True" valType="bool" updates="None"/>
     <Param name="Save psydat file" val="True" valType="bool" updates="None"/>
-    <Param name="Save wide csv file" val="True" valType="bool" updates="None"/>
+    <Param name="Save wide csv file" val="True" valType="bool" updates="None"/> -->
     <Param name="Screen" val="1" valType="num" updates="None"/>
     <Param name="Show info dlg" val="True" valType="bool" updates="None"/>
     <Param name="Show mouse" val="False" valType="bool" updates="None"/>
